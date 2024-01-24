@@ -1,0 +1,124 @@
+{
+    //
+    //
+    // Spelling
+
+    "cSpell.words": [
+        "allclose",
+        "Apolonio",
+        "arange",
+        "argmin",
+        "argpartition",
+        "argsort",
+        "argwhere",
+        "asarray",
+        "astype",
+        "bincount",
+        "bitmask",
+        "bitmasks",
+        "cmap",
+        "complexfloating",
+        "dtype",
+        "eigh",
+        "eigsh",
+        "fcluster",
+        "fontsize",
+        "fontweight",
+        "fromiter",
+        "imread",
+        "imshow",
+        "keras",
+        "Klasteriranje",
+        "kmeans",
+        "labelbottom",
+        "labelleft",
+        "linalg",
+        "matplotlib",
+        "maxclust",
+        "meshgrid",
+        "minkowski",
+        "mnist",
+        "nbytes",
+        "NDARRAY",
+        "ndenumerate",
+        "ndim",
+        "newaxis",
+        "nomask",
+        "plusplus",
+        "printoptions",
+        "pyplot",
+        "seterr",
+        "subtensor",
+        "triu",
+        "unoptimized",
+        "xaxis",
+        "xlabel",
+        "xlim",
+        "xticks",
+        "yaxis",
+        "ylim",
+        "yticks",
+        "facecolors",
+        "edgecolors",
+        "horizontalalignment",
+        "verticalalignment"
+    ],
+    "cSpell.language": "en, hr",
+
+    //
+    //
+    // Linting
+
+    "python.linting.pylintEnabled": true,
+    // "python.linting.flake8Enabled": true,
+    // "python.linting.pycodestyleEnabled": true,
+    // "python.linting.prospectorEnabled": true,
+    // "python.linting.pylamaEnabled": true,
+    // "python.linting.banditEnabled": true,
+    "python.linting.mypyEnabled": true,
+
+    "python.languageServer": "Pylance",
+
+    //
+    //
+    // Formatting
+
+    "[python]": {
+        // "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    // "python.formatting.provider": "autopep8",
+    // "python.formatting.provider": "yapf",
+    "python.formatting.provider": "none",
+
+    "runOnSave.commands": [
+        {
+            "globMatch": "**/${workspaceFolderBasename}/**/*.py",
+            "command": "ssort ${file}",
+            "runIn": "backend",
+            "runningStatusMessage": "Formatting file \"${fileBasename}\" with ssort",
+            "finishStatusMessage": "File \"${fileBasename}\" formatted with ssort",
+            "async": false
+        },
+        {
+            "globMatch": "**/${workspaceFolderBasename}/**/*.py",
+            "command": "editor.action.formatDocument",
+            "runIn": "vscode",
+            "async": false
+        },
+        {
+            "globMatch": "**/${workspaceFolderBasename}/**/*.py",
+            "command": "unify --in-place ${file}",
+            "runIn": "backend",
+            "runningStatusMessage": "Formatting file \"${fileBasename}\" with unify",
+            "finishStatusMessage": "File \"${fileBasename}\" formatted with unify",
+            "async": false
+        }
+    ],
+
+    "autoDocstring.docstringFormat": "pep257",
+    "python.analysis.typeCheckingMode": "off"
+}

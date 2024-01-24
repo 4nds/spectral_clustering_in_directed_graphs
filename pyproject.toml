@@ -1,0 +1,56 @@
+
+[tool.pylint.MASTER]
+load-plugins = "pylint_quotes"
+generated-members = "cv2.*"
+extension-pkg-whitelist = "numpy, cv2"
+
+[tool.pylint.'MESSAGES CONTROL']
+enable = "useless-suppression"
+disable = """
+    C0114, 
+    C0115, 
+    C0116, 
+"""
+# C0114 - missing-module-docstring
+# C0115 - missing-class-docstring
+# C0116 - missing-function-docstring
+
+[tool.pylint.FORMAT]
+max-line-length = 79
+max-args = 10
+
+string-quote = "single-avoid-escape"
+triple-quote = "double"
+docstring-quote = "double"
+
+
+[tool.mypy]
+disallow_untyped_defs = true
+disallow_any_unimported = true
+no_implicit_optional = true
+check_untyped_defs = true
+warn_return_any = true
+show_error_codes = true
+warn_unused_ignores = true
+
+
+[tool.pyright]
+# typeCheckingMode = "basic"
+# typeCheckingMode = "strict"
+
+
+[tool.autopep8]
+max_line_length = 79
+experimental = true
+# aggressive = 3
+
+
+[tool.yapf]
+column_limit = 79
+indent_width = 4
+based_on_style = "pep8"
+
+
+[tool.black]
+line-length = 79
+skip-string-normalization = true
